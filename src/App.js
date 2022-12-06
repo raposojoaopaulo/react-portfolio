@@ -3,7 +3,7 @@
 function App() {
   return (
     <div>
-      <h1>React App</h1>
+      <h1 className="text-4xl font-bold">React App</h1>
     </div>
   );
 }
