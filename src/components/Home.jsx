@@ -42,12 +42,6 @@ const Home = () => {
             />
         </div>
       </div>
-{/* 
-      <img
-          src={jp}
-          alt="jp"
-          className="absolute top-20 left-0 w-3/6 opacity-10"
-        /> */}
     </div>
   )
 }

@@ -8,11 +8,11 @@ function About() {
       text-white"
     >
       <div 
-        className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
-        w-full h-full"
+        className="max-w-screen-lg p-12 mx-auto flex flex-col justify-center
+        w-full h-full min-w-[50%]"
       >
         <div className="pb-8">
-          <p className="text-4xl font-bold border-b-4 inline">
+          <p className="text-4xl font-bold border-b-4 inline border-[#a460f9]">
             Sobre mim
           </p>
           <br />
