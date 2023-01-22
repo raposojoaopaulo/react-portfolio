@@ -9,7 +9,7 @@ function About() {
     >
       <div 
         className="max-w-screen-lg p-12 mx-auto flex flex-col justify-center
-        w-full h-full"
+        w-full h-full min-w-[50%]"
       >
         <div className="pb-8">
           <p className="text-4xl font-bold border-b-4 inline border-[#a460f9]">
