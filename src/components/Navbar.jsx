@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
 import logojpr from '../assets/logo/logojpr.svg'; 
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
 
@@ -10,18 +11,22 @@ const Navbar = () => {
     {
       id: 1,
       link: "Home",
+      target: "home",
     },
     {
       id: 2,
       link: "Sobre",
+      target: "about",
     },
     {
       id: 3,
       link:"Portfólio",
+      target: "portfolio",
     },
     {
       id: 4,
-      link: "Tecnologias",
+      link: "Habilidades",
+      target: "skills",
     },
   ];
 
@@ -32,32 +37,34 @@ const Navbar = () => {
 
 
     <div className="flex items-center">
+      <Link to={"home"} smooth duration={500}>
         <button className="cursor-pointer">
-            <h3 className="text-2xl font-medium text-blue-500">
-                <img className="h-12 object-cover"
-                    src={logojpr} alt="logo-jpr" />
-            </h3>
+          <img className="h-12 object-cover"
+              src={logojpr} alt="logo-jpr" />
         </button>
+      </Link>
     </div>
 
 
     <div className="items-center hidden space-x-8 lg:flex">
-      { links.map(({id, link}) => (
+      { links.map(({id, link, target}) => (
         <button key={id} className="flex text-gray-300 hover:text-[#a460f9]
           cursor-pointer transition-colors duration-300">
-          {link}
+          <Link to={target} smooth duration={500}>{link}</Link>
         </button>
       ))}
     </div>
 
 
     <div className="flex items-center space-x-5">
-      <button 
-      className="group text-white bg-[#a460f9] px-6 py-3 my-2 flex items-center rounded-md
-      cursor-pointer hover:bg-[#5F08C9] hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out"
-      >
-      Contato 
-      </button>
+      <Link to={"contact"} smooth duration={500}>
+        <button 
+        className="group text-white bg-[#a460f9] px-6 py-3 my-2 flex items-center rounded-md
+        cursor-pointer hover:bg-[#5F08C9] hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+        >
+          Contato 
+        </button>
+      </Link>
     </div>
 
     <div onClick={() => setNav(!nav)} 
