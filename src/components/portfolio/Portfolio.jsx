@@ -75,7 +75,7 @@ function Portfolio() {
     name="portfolio"
     className="bg-gradient-to-b from-[#181818] via-[#181818] to-[#101010] w-full text-white md:h-screen"
     >
-    <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full min-w-[70%] max-h-max">
+    <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full min-w-[70%]">
       <div className="pb-8">
         <p className="text-4xl font-bold inline border-b-4 border-[#a460f9]">
           Portfólio

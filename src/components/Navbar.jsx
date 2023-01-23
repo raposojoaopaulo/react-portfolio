@@ -40,7 +40,7 @@ const Navbar = () => {
       <Link to={"home"} smooth duration={500}>
         <button className="cursor-pointer">
           <img className="h-12 object-cover"
-              src={logojpr} alt="logo-jpr" />
+            src={logojpr} alt="logo-jpr" />
         </button>
       </Link>
     </div>
@@ -75,10 +75,16 @@ const Navbar = () => {
         <ul className="flex flex-col justify-center items-center
         absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-[#181818] to-[#0F0F0F]
         text-gray-300">
-          { links.map(({id, link}) => (
+          { links.map(({id, link, target}) => (
             <li key={id} className="px-4 cursor-pointer font-medium
             py-6 hover:scale-110 duration-200">
-              {link}
+              <Link 
+                onClick={() => setNav(!nav)}
+                to={target} 
+                smooth duration={500}
+              >
+                {link}
+              </Link>
             </li>
           ))}
         </ul>
